@@ -48,6 +48,7 @@ var silder = (function silderObj($){
   }
 
   function initEvent(){
+    /*******************触摸事件**********************/
     boxIn.on("touchstart",function(ev){
       beginX = ev.touches[0].pageX;
       canAutoMove = false;

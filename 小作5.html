@@ -1,0 +1,113 @@
+
+<!doctype html>
+<html>
+
+<head>
+    <title>slide组件</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <script type="text/javascript" src="./js/zepto.js"></script>
+    <!-- <script type="text/javascript" src="touch.js"></script> -->
+    <style type="text/css">
+    * {
+        margin: 0px;
+        padding: 0px;
+        border: 0px;
+    }
+    div#container {
+        overflow: hidden;
+        position:relative;
+    }
+    div#container div {
+        float: left;
+    }
+    div#container div img{
+        height: 400px;
+        width: 640px;
+    }
+    div#show {
+        overflow: hidden;
+    }
+    .focus_control{
+        position: absolute;
+        top: 42%;
+    }
+    .focus_control div{
+        float: left;
+    }
+    .focus_control_list ul{
+        list-style: none;
+    }
+    .focus_control_list ul li{
+        float: left;
+        margin-left: 10px;
+    }
+    div#scrnBtnL{
+        height: 55px;
+        text-indent: -99999px;
+        background: url(http://y1.ifengimg.com/084f0f3021c4226b/2014/0303/documentarybg1402.png) no-repeat;
+        width: 49px;
+        background-position: right center;
+    }
+    div#scrnBtnR{
+        height: 55px;
+        text-indent: -99999px;
+        background: url(http://y1.ifengimg.com/084f0f3021c4226b/2014/0303/documentarybg1403.png) no-repeat;
+        width: 49px;
+        background-position: right center;
+    }
+    .focus_control_list ul li img{
+        height: 60px;
+        width: 80px;
+    }
+    </style>
+</head>
+
+<body>
+    <div id="show">
+        <div id="container" style="width: 1600px;">
+            
+        </div>
+    </div>
+
+
+    <!-- 源数据 -->
+    <script type="text/javascript">
+    //数据
+    var focusData = [{
+        link: "#",
+        img: "http://y2.ifengimg.com/25852dfe6a0682f3/2014/0702/img_1.jpg"
+    }, {
+        link: "#",
+        img: "http://y2.ifengimg.com/25852dfe6a0682f3/2014/0702/img_2.jpg"
+    }, {
+        link: "#",
+        img: "http://y2.ifengimg.com/25852dfe6a0682f3/2014/0702/img_3.jpg"
+    }, {
+        link: "#",
+        img: "http://y2.ifengimg.com/25852dfe6a0682f3/2014/0702/img_4.jpg"
+    }, {
+        link: "#",
+        img: "http://y3.ifengimg.com/a/2014_28/ddaedd50ec82a76.jpg"    }];
+    </script>
+
+
+    <script type="text/javascript" src="./js/slide.js"></script>
+    <script type="text/javascript">
+    Zepto(function() {
+	    var slide = new Slide({
+	        "container": "container",
+	        "viewContainer": "show",
+	        "childrenDom":"div",
+	        "height": "400",
+	        "width": "640",
+            "interval": "3000",
+            "direction": "left",
+            "controlNext": "scrnBtnR",
+            "controlPrev": "scrnBtnL",
+            "controlList":"focus_control_list_id"
+	    });
+    });
+    </script>
+</body>
+
+</html>
