@@ -79,8 +79,6 @@
         var moveHandler = function(event) {
             event.preventDefault();
             self.offsetX = typeof event.touches == 'undefined' ? 0 : event.touches[0].pageX - self.startX;
-            // self.offsetX = event.touches[0].pageX - self.startX;
-            // console.dir(self.offsetX);
             self.cache(self.index);
             self.move(self.offsetX);
             self.clear();
@@ -130,7 +128,7 @@
 
         //缩略图选择
         var clickCurrent = function(event){
-            var _index = parseInt($(this).attr("data-key")) - self.index;
+            var _index = parseInt($(this).attr("data-key"));
             self.moveIndex(_index);
         }
 

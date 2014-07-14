@@ -98,6 +98,7 @@ var silder = (function silderObj($){
       addTranform("-"+(index*boxWidth)+"px");
       $(this).addClass('current');
       $(this).siblings().removeClass('current');
+      autoMove();
     });
 
     $(".btn_next").bind('click', function(event) {
