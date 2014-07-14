@@ -1,4 +1,4 @@
-var silder = (function($){
+var silder = (function silderObj($){
   var box = $("#js_focus");
   var boxWidth = box.width()+8;
   var boxIn = $("#js_focus_in");
@@ -100,14 +100,18 @@ var silder = (function($){
     });
 
     $(".btn_next").bind('click', function(event) {
+      stopMove();
       moveNext();
+      autoMove();
     });
      $(".btn_prev").bind('click', function(event) {
+      stopMove();
       if(index == 0){
         index = itemCount -1;
       }
       index = index -2;
       moveNext();
+      autoMove();
     });
   }
 
@@ -115,4 +119,5 @@ var silder = (function($){
     init:init,
     stopmove:stopMove
   }
+
 })((Zepto || jQuery));
