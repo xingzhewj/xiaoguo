@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <script type="text/javascript" src="http://h1.ifengimg.com/f3a90b93df336b6f/2013/0704/zepto1.01.js"></script>
+    <title></title>
+    <style type="text/css">
+    * {
+        margin: 0px;
+        padding: 0px;
+        border: 0px;
+    }
+    .focus {
+    width: 100%;
+    position: relative;
+    min-width: 320px;
+    min-height: 179px;
+    overflow: hidden;
+    margin: 0px;
+    padding: 0px;
+    }
+    #js_focus {
+    overflow: hidden;
+    -webkit-touch-callout: none;
+    touch-callout: none;
+    -webkit-user-select: none;
+    user-select: none;
+    }
+    .anim {
+    -webkit-transition: 0.3s;
+    -ms-transition: 0.3s;
+    -moz-transition: 0.3s;
+    -o-transition: 0.3s;
+    transition: 0.3s;
+    }
+    #js_focus_in {
+    white-space: nowrap;
+    }
+    #js_focus_in .pic {
+    display: inline-block;
+    width: 100%;
+    position: relative;
+    }
+    .pic img{
+        width: 100%;
+        padding: 0px;
+    }
+    .focus_control_list ul{
+        list-style: none;
+    }
+    .focus_control_list ul li{
+        float: left;
+    }
+    .focus_control{
+        position: absolute;
+        top: 500px;
+        width: 96%;
+        margin-left: 2%;
+    }
+    .focus_control div{
+        float: left;
+    }
+
+    .focus_control_list ul{
+        margin:0px;
+        padding: 0px;
+    }
+    .focus_control_list ul li{
+        margin-right: 10px;
+    }
+    .btn_prev{
+        display: inline;
+        float: left;
+        overflow: hidden;
+        background: url(http://y1.ifengimg.com/084f0f3021c4226b/2014/0303/documentarybg1402.png) no-repeat;
+        text-indent: -99999px;
+        width: 49px;
+        background-position: right center;
+        margin: 0 15px 0 0;
+    }
+    .btn_next{
+        display: inline;
+        float: left;
+        overflow: hidden;
+        background: url(http://y1.ifengimg.com/084f0f3021c4226b/2014/0303/documentarybg1403.png) no-repeat;
+        text-indent: -99999px;
+        width: 49px;
+        background-position: right center;
+        margin: 0;
+    }
+    .current{
+        border: 1px solid red;
+    }
+    </style>
+  </head>
+<body>
+    <div class="focus" id="js_focus_box">
+        <div class="piccont" id="js_focus">
+            <div id="js_focus_in" style="-webkit-transform: translate3d(0px, 0px, 0px);" class="anim">
+                <div class="pic">
+                    <a href="http://v.ifeng.com/teleplay/201407/0611d587-cc7b-40ed-815f-a60de2d95a22.shtml" title="我的青春高八度：吴秀波首秀">
+                        <img src="http://y0.ifengimg.com/9527083ac71c8e42/2014/0704/rdn_53b65c0b05167.jpg" alt="我的青春高八度：吴秀波首秀">
+                    </a>
+                    
+                </div>
+                <div class="pic">
+                    <a href="http://v.ifeng.com/v/news/77sb77n/index.shtml?_v_rec1#018564a9-f385-4fea-8169-ee330208a1cd" title="中国出历史牌敲打安倍">
+                        <img src="http://y0.ifengimg.com/a/2014_28/0ae3506ed95f619.jpg" alt="中国出历史牌敲打安倍">
+                    </a>
+                    
+                </div>
+                <div class="pic">
+                    <a href="http://v.ifeng.com/mil/special/htjy/" title="实拍中国军官登日准航母">
+                        <img src="http://y1.ifengimg.com/a/2014_28/7e280c30311081d.jpg" alt="实拍中国军官登日准航母">
+                    </a>
+                   
+                </div>
+                <div class="pic">
+                    <a href="http://v.ifeng.com/ent/mingxing/2014007/01f3315d-4d88-49be-8ab7-84efa742ed77.shtml" title="“甜心教主”转型现场扭臀">
+                        <img src="http://y3.ifengimg.com/a/2014_28/80fb3876babe733.jpg" alt="“甜心教主”转型现场扭臀">
+                    </a>
+                    
+                </div>
+                <div class="pic">
+                    <a href="http://v.ifeng.com/teleplay/201407/0611d587-cc7b-40ed-815f-a60de2d95a22.shtml" title="我的青春高八度：吴秀波首秀">
+                        <img src="http://y0.ifengimg.com/9527083ac71c8e42/2014/0704/rdn_53b65c0b05167.jpg" alt="我的青春高八度：吴秀波首秀">
+                    </a>
+                    
+                </div>
+            </div>
+            <div class="focus_control" id="scrnTab">
+            <div id="scrnBtnL"><a href="javascript:;" hidefocus="true" title="上一个" class="btn_prev" style="height:55px;">上一个</a></div>
+            <div class="focus_control_list" id="focus_control_list_id">
+                <ul>
+                    <li class="current" id="scrnLi_0"><a href="javascript:void(0);" onclick="return false;" target="video"><img src="http://y2.ifengimg.com/2014/07/07/07412060.jpg" alt="对越作战争议战法：步兵自缚坦克前被当活靶打" title="对越作战争议战法：步兵自缚坦克前被当活靶打"><span class="shadow"></span></a></li>
+                    <li class="" id="scrnLi_1"><a href="javascript:void(0);" onclick="return false;" target="video"><img src="http://y2.ifengimg.com/2014/07/07/07412060.jpg" alt="对越作战争议战法：步兵自缚坦克前被当活靶打" title="对越作战争议战法：步兵自缚坦克前被当活靶打"><span class="shadow"></span></a></li>
+                    <li class="" id="scrnLi_2"><a href="javascript:void(0);" onclick="return false;" target="video"><img src="http://y2.ifengimg.com/2014/07/07/07412060.jpg" alt="对越作战争议战法：步兵自缚坦克前被当活靶打" title="对越作战争议战法：步兵自缚坦克前被当活靶打"><span class="shadow"></span></a></li>
+                    <li class="" id="scrnLi_3"><a href="javascript:void(0);" onclick="return false;" target="video"><img src="http://y2.ifengimg.com/2014/07/07/07412060.jpg" alt="对越作战争议战法：步兵自缚坦克前被当活靶打" title="对越作战争议战法：步兵自缚坦克前被当活靶打"><span class="shadow"></span></a></li>
+                </ul>
+            </div>
+            <div id="scrnBtnR"><a href="javascript:;" hidefocus="true" title="下一个" class="btn_next" style="height:55px;">下一个</a></div>
+            </div>
+        </div>
+    </div>
+    <script src="./js/test4.js"></script>
+</body>
+
+</html>

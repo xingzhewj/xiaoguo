@@ -1,0 +1,34 @@
+<DOCTYPE html>
+<html>
+<head>
+	<style type="text/css">
+	.divparent{
+		width: 500px;
+		height: 300px;
+		border: 1px solid green;
+		margin: 0 auto;
+		display: -webkit-box;
+		-webkit-box-orient: vertical;
+	}
+	.divchildren1{
+		background-color: blue;
+		-webkit-box-ordinal-group: 2;
+		-webkit-box-flex: 2;
+	}
+	.divchildren2{
+		background-color: yellow;
+		-webkit-box-ordinal-group: 2;
+		-webkit-box-flex: 1;
+	}
+	.divchildren3{
+		background-color: red;
+		height: 50px;
+	}
+	</style>
+</head>
+<div class="divparent">
+	<div class="divchildren1"></div>
+	<div class="divchildren2"></div>
+	<div class="divchildren3"></div>
+</div>
+</html>
